@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/movieSite/static/css/main.0e5a4700.css",
+    "main.js": "/movieSite/static/js/main.758f5ea2.js",
+    "static/js/787.8e21622d.chunk.js": "/movieSite/static/js/787.8e21622d.chunk.js",
+    "static/media/3dgifmaker11773.gif": "/movieSite/static/media/3dgifmaker11773.0723a4dcd7a470bfb31f.gif",
+    "index.html": "/movieSite/index.html",
+    "main.0e5a4700.css.map": "/movieSite/static/css/main.0e5a4700.css.map",
+    "main.758f5ea2.js.map": "/movieSite/static/js/main.758f5ea2.js.map",
+    "787.8e21622d.chunk.js.map": "/movieSite/static/js/787.8e21622d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e5a4700.css",
+    "static/js/main.758f5ea2.js"
+  ]
+}
