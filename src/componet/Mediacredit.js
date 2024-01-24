@@ -28,7 +28,7 @@ const Mediacredit = (props) => {
     
   return (
     <div>
-        <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 pt-10'>Top Billed Cast</h1>
+        <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 pt-10 dark:text-white'>Top Billed Cast</h1>
         <div className="container gap-2 inline-flex w-max overflow-x-scroll">
             {creditData.cast && creditData.cast.map((item, index) => (
             <Card className="py-4 overflow-visible" key={index}>

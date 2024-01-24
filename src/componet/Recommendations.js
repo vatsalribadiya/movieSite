@@ -31,7 +31,7 @@ const Recommendations = (props) => {
     console.log(recommendationsData.results)
   return (
     <div>
-        <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 pt-10'>Recommendations</h1>
+        <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 pt-10 dark:text-white'>Recommendations</h1>
         <div className="container gap-2 inline-flex w-max overflow-x-scroll">
             {recommendationsData.results && recommendationsData.results.map((item, index) => (
             <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" key={index}>

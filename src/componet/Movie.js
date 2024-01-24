@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from './Spinner';
 import { Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import { useNavigate } from 'react-router-dom';
 
 const Movie = (props) => {
+  const navigate = useNavigate();
   const [tvSerivesData, setTvSerivesData] = useState([]);
- const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);
 
  useEffect(() => {
     fetchMyAPI();
@@ -42,6 +44,11 @@ const Movie = (props) => {
   useEffect(() => {
       document.title = 'Movies';
   }, []);
+  const getDetails = (e) => {
+    const  mediaType = e.target.getAttribute('value');
+    const mediaId = e.target.getAttribute('val');
+    navigate('/Myinfo', { state: { mediaId: mediaId, mediaType: mediaType } })
+ }
   return (
     <>
     <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
@@ -56,10 +63,10 @@ const Movie = (props) => {
           hasMore={true}
           loader={<Spinner/>}
         >
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 dark:text-white dark:bg-gray-900">
               {tvSerivesData && tvSerivesData.map((tvSerivesData, index) => (
                   <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" key={index}>
-                  <Card shadow="sm" isPressable  >
+                  <Card shadow="sm" isPressable onClick={getDetails} >
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-center overflow-visible mx-auto">
                       <Image alt="Card background" className="object-cover rounded-xl" src={`https://image.tmdb.org/t/p/w500${tvSerivesData.poster_path}`} width={270} val={tvSerivesData.id} value={tvSerivesData.media_type}/>
                     </CardHeader>

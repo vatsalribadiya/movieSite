@@ -38,7 +38,7 @@ function Watchprovider(props) {
     <div>
         <div className="flex">
             {watchProviderDeatils && watchProviderDeatils.map((providerData, index) => (
-            <div className="p-3 bg-gray-100" key={index}>
+            <div className="p-3 bg-gray-100 " key={index}>
                 <img src={`https://image.tmdb.org/t/p/w500${providerData.logo_path}`} alt="" width={60}/>
             </div>
             ))}

@@ -16,7 +16,7 @@ const App = () => {
     setProgress(progress);
   }
   return (
-    <div className='App'>
+    <div className='App dark:bg-gray-900 '>
       <Router>
       <NavbarNew/>
       <LoadingBar color='#f11946' progress={progress} onLoaderFinished={() => setProgress(0)}/>
